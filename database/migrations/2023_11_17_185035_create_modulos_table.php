@@ -20,9 +20,13 @@ return new class extends Migration
             $table->enum('turno', ['morning', 'afternoon']);
             $table->string('aula');
             
+
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('especialidad_id');
+            $table->unsignedBigInteger('estudio_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('especialidad_id')->references('id')->on('especialidades');
-            $table->foreign('estudio_id')->references('id')->on('estudios');
+            $table->foreign('especialidad_id')->references('id')->on('especialidad');
+            $table->foreign('estudio_id')->references('id')->on('estudio');
             $table->timestamps();
         });
     }

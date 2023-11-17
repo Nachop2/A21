@@ -6,6 +6,7 @@ use App\Models\Modulo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+
 class ModuloController extends Controller
 {
     /**

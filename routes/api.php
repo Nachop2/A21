@@ -44,7 +44,7 @@ Route::middleware('auth:sanctum')->group( function () {
 
 // Non Auth related
 Route::middleware('auth:sanctum')->group(function () {
-    Route::resource('modulos', Moduloontroller::class);
+    Route::resource('modulos', ModuloController::class);
     });
     
 
